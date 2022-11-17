@@ -1,8 +1,6 @@
 import os
 
 """
-this idea came from https://forums.developer.nvidia.com/t/setting-python-development-environment-isaac-sim/154703/12
-
 change the omniverse_path to your own, then open a terminal: 
 
 mkdir .vscode & python omni_env.py > .vscode/settings.json
@@ -26,6 +24,10 @@ ret = log_import_path(path)
 
 path = os.path.join( omniverse_path, "exts")
 ret = log_import_path(path, ret)
+
+path = os.path.join( omniverse_path, "kit/extsphysics")
+ret = log_import_path(path, ret)
+ret += "        \"" + os.path.join( omniverse_path, "kit/extsphysics/omni.usd.schema.physx/pxr").replace("\\", "/" ) + "\",\n"
 
 ret += "        \"" + os.path.join( omniverse_path, "kit/plugins/bindings-python").replace("\\", "/" ) + "\",\n"
 
