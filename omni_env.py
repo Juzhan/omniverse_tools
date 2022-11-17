@@ -1,6 +1,8 @@
 import os
 
 """
+this idea came from https://forums.developer.nvidia.com/t/setting-python-development-environment-isaac-sim/154703/12
+
 change the omniverse_path to your own, then open a terminal: 
 
 mkdir .vscode & python omni_env.py > .vscode/settings.json
